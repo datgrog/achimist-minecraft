@@ -1,1 +1,11 @@
+<div>
+  <span *ngFor="let ingredient of ingredients" class="invslot">
+    <span class="invslot-item">
+      <span class="inv-sprite"
+            [style.background-position-x.px]="ingredient.css.backgroundPositionX"
+            [style.background-position-y.px]="ingredient.css.backgroundPositionY">
+      </span>
+    </span>
+  </span>
+</div>
 <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

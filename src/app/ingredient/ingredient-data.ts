@@ -8,7 +8,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'Les verrues du Nether sont des plantes poussant naturellement dans le Nether.',
         'quantity': 99,
         'css': {
-          'background-position': '-704px -640px'
+          'backgroundPositionX': '-704',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -17,7 +18,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'La carotte dorée peut être mangée et restaure. Elle permet aussi et surtout de confectionner des potions de vision nocturne.',
         'quantity': 99,
         'css': {
-          'background-position': '-640px -640px'
+          'backgroundPositionX': '-640',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -26,7 +28,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'La crème de magma est un objet obtenu par l artisanat ou en tuant des cubes de magma.',
         'quantity': 99,
         'css': {
-          'background-position': '-672px -640px'
+          'backgroundPositionX': '-672',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -35,7 +38,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'La patte de lapin est un objet lâché par les lapins qui peut être utilisé pour concocter des potions de sauts.',
         'quantity': 99,
         'css': {
-          'background-position': '-800px -640px'
+          'backgroundPositionX': '-800',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -44,7 +48,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'Le sucre est un objet fabriqué à partir de la canne à sucre ou pouvant être obtenu à la mort des sorcières.',
         'quantity': 99,
         'css': {
-          'background-position': '-512px -832px'
+          'backgroundPositionX': '-512',
+          'backgroundPositionY': '-832'
         }
       },
       {
@@ -53,7 +58,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'Le poisson-globe ou encore fugu est un objet qui peut être trouvé en pêchant. Consommé, il empoisonne sévèrement le joueur pendant une minute.',
         'quantity': 99,
         'css': {
-          'background-position': '-128px -832px;'
+          'backgroundPositionX': '-128',
+          'backgroundPositionY': '-832'
         }
       },
       {
@@ -62,7 +68,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'La pastèque scintillante est un objet qui s obtient via l artisanat à partir d une tranche de pastèque et de pépites d or.',
         'quantity': 99,
         'css': {
-          'background-position': '-576px -640px'
+          'backgroundPositionX': '-576',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -71,7 +78,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'L œil d araignée est un aliment qui s obtient en tuant des araignées ou des sorcières. Consommé il restaure des points de saturation, mais empoisonne aussi le joueur.',
         'quantity': 99,
         'css': {
-          'background-position': '-832px -640px'
+          'backgroundPositionX': '-832',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -80,7 +88,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'Les larmes de Ghast sont des objets obtenus à la mort des Ghasts.',
         'quantity': 99,
         'css': {
-          'background-position': '-544px -640px'
+          'backgroundPositionX': '-544',
+          'backgroundPositionY': '-640'
         }
       },
       {
@@ -89,7 +98,8 @@ export class IngredientData implements InMemoryDbService {
         'description': 'La poudre de Blaze est un objet qui s obtient à partir de bâtons de blaze.',
         'quantity': 99,
         'css': {
-          'background-position': '-416px -640px'
+          'backgroundPositionX': '-416',
+          'backgroundPositionY': '-640'
         }
       }
     ];
