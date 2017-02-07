@@ -1,0 +1,21 @@
+{
+  "generator-fountain-angular2": {
+    "version": "1.0.0-rc2",
+    "props": {
+      "resolved": "/Users/admin/.nvm/versions/node/v4.5.0/lib/node_modules/generator-fountain-webapp/node_modules/generator-fountain-angular2/generators/app/index.js",
+      "argv": {
+        "remain": [],
+        "cooked": [],
+        "original": []
+      },
+      "modules": "webpack",
+      "namespace": "fountain-angular2",
+      "framework": "angular2",
+      "js": "typescript",
+      "css": "css",
+      "ci": [],
+      "sample": "techs",
+      "router": "router"
+    }
+  }
+}

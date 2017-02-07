@@ -1,0 +1,126 @@
+.mcui {
+    display: inline-block;
+    position: relative;
+    background-color: #C6C6C6;
+    border: 2px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 6px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.mcui-Brewing_Stand > .mcui-input {
+    text-align: center;
+}
+
+.mcui-Brewing_Stand > * {
+    display: block;
+}
+
+.mcui-Brewing_Stand > .mcui-input > .invslot {
+    margin-top: 3px;
+}
+
+.mcui-Brewing_Stand .invslot {
+    vertical-align: top;
+}
+
+.invslot {
+    position: relative;
+    display: inline-block;
+    background: #8B8B8B no-repeat center center / 32px 32px;
+    border: 2px solid;
+    border-color: #373737 #FFF #FFF #373737;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 1;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/* 1 */
+
+.mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-bubbling {
+    background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/d/db/Grid_layout_Brewing_Bubbles_%28In-active%29.png);
+}
+
+.mcui-Brewing_Stand .mcui-bubbling {
+    background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/6/65/Grid_layout_Brewing_Bubbles.gif);
+}
+
+.mcui-Brewing_Stand .mcui-bubbling, .mcui-Brewing_Stand .mcui-arrow {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 57px;
+}
+
+.mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-arrow {
+    background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/5/59/Grid_layout_Brewing_Arrow_%28In-active%29.png);
+}
+
+.mcui-Brewing_Stand .mcui-arrow {
+    background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/4/4b/Grid_layout_Brewing_Arrow.png);
+}
+
+.mcui-Brewing_Stand .mcui-bubbling, .mcui-Brewing_Stand .mcui-arrow {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 57px;
+}
+/* 1 END */
+
+/* 2 */
+
+.mcui-Brewing_Stand > .mcui-paths {
+    position: relative;
+    background: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/8/82/Grid_layout_Brewing_Paths.png) no-repeat;
+    width: 60px;
+    height: 40px;
+    margin: -20px auto -16px;
+    z-index: 1;
+}
+
+/* 2 END */
+
+/* 3 */
+
+.mcui-Brewing_Stand .mcui-output .invslot {
+    background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/5/59/Grid_layout_Brewing_Empty.png);
+}
+
+.mcui-Brewing_Stand .mcui-output2 {
+    margin: 14px 10px 0;
+}
+
+/* 3 END */
+
+.invslot:after {
+    top: -2px;
+    right: -2px;
+}
+
+.invslot:before, .invslot:after {
+    content: "";
+    position: absolute;
+    background-color: #8B8B8B;
+    height: 2px;
+    width: 2px;
+    pointer-events: none;
+}
+
+/* INVENTORY */
+
+#inventory {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 358px;
+}
+
+/* END INVENTORY */
