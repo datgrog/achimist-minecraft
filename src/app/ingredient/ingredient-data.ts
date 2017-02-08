@@ -13,7 +13,7 @@ export class IngredientData implements InMemoryDbService {
         }
       },
       {
-        'id': 0,
+        'id': 396,
         'nom': 'Carotte Dorée',
         'description': 'La carotte dorée peut être mangée et restaure. Elle permet aussi et surtout de confectionner des potions de vision nocturne.',
         'quantity': 99,
@@ -100,6 +100,16 @@ export class IngredientData implements InMemoryDbService {
         'css': {
           'backgroundPositionX': '-416',
           'backgroundPositionY': '-640'
+        }
+      },
+      {
+        'id': 373,
+        'nom': 'Fiole d eau',
+        'description': 'La base pour toute potion. Créer à partir d une fiole que l on a remplit avec de l eau',
+        'quantity': 99,
+        'css': {
+          'backgroundPositionX': '-832',
+          'backgroundPositionY': '-1056'
         }
       }
     ];

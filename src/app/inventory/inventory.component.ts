@@ -18,6 +18,18 @@ export class InventoryComponent implements OnInit {
     this.getIngredients();
   }
 
+  receivedData: Array<any> = [];
+
+  transferDataSuccess($event: any) {
+    this.receivedData.push($event);
+    console.log($event.dragData);
+  }
+
+  usedIngredient($event: any) {
+    let usedIngredient: Ingredient = $event.dragData;
+    usedIngredient.quantity--;
+  }
+
   getIngredients() {
     this.ingredientService.getIngredients()
       .subscribe(

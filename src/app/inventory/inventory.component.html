@@ -9,3 +9,42 @@
   </span>
 </div>
 <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+<h4>Transfer custom data in Drag-and-Drop</h4>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">Available to drag</div>
+      <div class="panel-body">
+        <span class="invslot" *ngFor="let ingredient of ingredients">
+          <span class="invslot-item"
+                (onDragSuccess)="usedIngredient($event)"
+                [dragData]="ingredient"
+                dnd-draggable [dragEnabled]="true">
+            <span class="inv-sprite" style="color: white"
+                  [style.background-position-x.px]="ingredient.css.backgroundPositionX"
+                  [style.background-position-y.px]="ingredient.css.backgroundPositionY">
+              <!--<div>{{ingredient | json}}</div>-->
+            </span>
+          </span>
+          <p style="margin: 0;position: absolute;bottom: 0;right: 0;color: white;">{{ingredient.quantity}}</p>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div dnd-droppable class="panel panel-info" (onDropSuccess)="transferDataSuccess($event)">
+      <div class="panel-heading">Place to drop (Items:{{receivedData.length}})</div>
+      <div class="panel-body">
+        <div [hidden]="!receivedData.length > 0" *ngFor="let data of receivedData">
+          <!--<span class="invslot-item">
+            <span class="inv-sprite"
+                  [style.background-position-x.px]="ingredient.css.backgroundPositionX"
+                  [style.background-position-y.px]="ingredient.css.backgroundPositionY">
+            </span>
+          </span>-->
+          {{data.dragData | json}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
