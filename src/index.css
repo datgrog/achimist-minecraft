@@ -78,38 +78,58 @@ a:hover {
   color: white;
 }
 
-.techs-container {
-  margin: 1rem;
-}
-.techs-h2 {
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-.techs {
+/* alchimist desk */
+
+.alchimistDesk {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  justify-content: space-between;
+  background: #3A539B;
 
-.tech {
-  height: 15rem;
-  width: 15rem;
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  margin: 1rem;
   padding: 1rem;
 }
-.tech-logo {
-  width: 5rem;
-  height: 5rem;
-  float: right;
-  margin: 0 0 .5rem .5rem;
+
+.panel-success {
+  border-color: #d6e9c6 !important;
 }
-.tech-h3 {
-  font-size: 1.5rem;
-  margin: 0 0 2rem 0;
+
+.panel-info {
+  border-color: #bce8f1 !important;
 }
+
+.panel {
+  /*margin-bottom: 20px;*/
+  background-color: #fff;
+  border: 5px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-info>.panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.panel-success>.panel-heading {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+/* alchimist desk END */
 
 /* drag and drop */
 

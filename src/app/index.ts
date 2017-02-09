@@ -10,8 +10,9 @@ import {BrewerModule} from './brewer/index';
 
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { IngredientData } from './ingredient/ingredient-data';
 import { InventoryModule } from './inventory/index';
+
+import { IngredientRecipeData } from './ingredient.recipe.data';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { InventoryModule } from './inventory/index';
     BrewerModule,
     InventoryModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(IngredientData)
+    InMemoryWebApiModule.forRoot(IngredientRecipeData)
   ],
   declarations: [
     RootComponent,

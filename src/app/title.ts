@@ -1,7 +1,9 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'fountain-title',
+  selector: 'alchimist-title',
   template: require('./title.html')
 })
-export class TitleComponent {}
+export class TitleComponent {
+  @Input() title: string;
+}

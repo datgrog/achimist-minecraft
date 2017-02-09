@@ -6,16 +6,16 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-import { Ingredient } from './ingredient.model';
+import { Recipe } from './recipe.model';
 
 @Injectable()
-export class IngredientService {
-  private ingredientsUrl = 'app/ingredients';  // url to fake web API
+export class RecipeService {
+  private recipesUrl = 'app/recipes';  // url to fake web API
 
   constructor (private http: Http) {}
 
-  getIngredients (): Observable<Ingredient[]> {
-    return this.http.get(this.ingredientsUrl)
+  getRecipes (): Observable<Recipe[]> {
+    return this.http.get(this.recipesUrl)
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -24,7 +24,7 @@ export class IngredientService {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.ingredientsUrl, { name }, options)
+    return this.http.post(this.recipesUrl, { name }, options)
       .map(this.extractData)
       .catch(this.handleError);
   }*/
@@ -50,5 +50,5 @@ export class IngredientService {
 }
 
 /*
- private ingredientsUrl = 'app/heroes.json'; // URL to JSON file
+ private recipesUrl = 'app/heroes.json'; // URL to JSON file
  */

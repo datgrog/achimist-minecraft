@@ -11,6 +11,7 @@ import { IngredientService } from '../ingredient/ingredient.service';
 export class InventoryComponent implements OnInit {
   errorMessage: string;
   ingredients: Ingredient[];
+  receivedData: Array<any> = [];
 
   constructor (private ingredientService: IngredientService) {}
 
@@ -18,7 +19,18 @@ export class InventoryComponent implements OnInit {
     this.getIngredients();
   }
 
-  receivedData: Array<any> = [];
+  getIngredients() {
+    this.ingredientService.getIngredients()
+      .subscribe(
+        ingredients => {
+          this.ingredients = ingredients;
+          console.log('Ingredients');
+          console.log(ingredients);
+        },
+        error => {
+          this.errorMessage = <any>error;
+        });
+  }
 
   transferDataSuccess($event: any) {
     this.receivedData.push($event);
@@ -28,18 +40,6 @@ export class InventoryComponent implements OnInit {
   usedIngredient($event: any) {
     let usedIngredient: Ingredient = $event.dragData;
     usedIngredient.quantity--;
-  }
-
-  getIngredients() {
-    this.ingredientService.getIngredients()
-      .subscribe(
-        ingredients => {
-          this.ingredients = ingredients;
-          console.log(ingredients);
-        },
-        error => {
-          this.errorMessage = <any>error;
-        });
   }
 
 /*  addHero (name: string) {

@@ -1,156 +1,66 @@
-<div class="title">
-    <div>
-        <span style="height: 300px;" class="mcui mcui-Brewing_Stand">
-            <span class="mcui-input mcui-inactive">
-                <span class="mcui-bubbling"><br></span>
-                <span style="width: 40px;height: 40px;margin: 0 20px;" class="invslot"><br></span>
-                <span class="mcui-arrow"><br></span>
+<div class="brewer">
+    <span class="mcui mcui-Brewing_Stand">
+      <span class="mcui-input mcui-inactive">
+        <span class="mcui-bubbling"></span>
+
+        <!--LIVE-->
+        <span class="invslot"
+              dnd-droppable (onDropSuccess)="transferDataSuccess($event)"
+              *ngIf="mode === 'live'">
+          <span class="invslot-item">
+            <span class="inv-sprite" *ngIf="receivedData.length > 0"
+                  [style.background-position-x.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionX"
+                  [style.background-position-y.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionY">
+
             </span>
-            <span style="height: 50px;margin: -12px auto -26px;" class="mcui-paths"><br></span>
-            <span style="width: 160px;margin: 0 auto;" class="mcui-output">
-              <span style="width: 40px;height: 40px;" class="invslot mcui-output1"><br></span>
-              <span style="width: 40px;height: 40px;" class="invslot mcui-output2"><br></span>
-              <span style="width: 40px;height: 40px;" class="invslot mcui-output3"><br></span>
-            </span>
-            <div id="inventory" >
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-                <span class="invslot">
-                    <span class="invslot-item">
-                        <span class="sprite inv-sprite"></span>
-                    </span>
-                </span>
-            </div>
+          </span>
         </span>
-    </div>
 
+        <!-- DEMO-->
+        <span class="invslot"
+                *ngIf="mode === 'demo'">
+            <span class="invslot-item">
+              <span class="inv-sprite"
+                    [class.inv-sprite-demo-sugar]="mode === 'demo'">
+              </span>
+            </span>
+        </span>
 
+        <span class="mcui-arrow"></span>
+      </span>
+
+      <span style="height: 50px;margin: -12px auto -26px;" class="mcui-paths"></span>
+
+      <span style="width: 160px;margin: 0 auto;" class="mcui-output">
+        <span class="invslot mcui-output1">
+
+          <span class="invslot-item">
+            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
+            </span>
+          </span>
+
+        </span>
+        <span class="invslot mcui-output2">
+          <span class="invslot-item">
+            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
+            </span>
+          </span>
+        </span>
+        <span class="invslot mcui-output3">
+          <span class="invslot-item">
+            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
+            </span>
+          </span>
+        </span>
+      </span>
+    </span>
 </div>
+<span class="invslot" *ngFor="let recipe of recipes">
+          <span class="invslot-item">
+            <span [title]="recipe.description" class="inv-sprite"
+                  [style.background-position-x.px]="recipe.result.css.backgroundPositionX"
+                  [style.background-position-y.px]="recipe.result.css.backgroundPositionY">
+              <!--<div>{{recipe | json}}</div>-->
+            </span>
+          </span>
+        </span>

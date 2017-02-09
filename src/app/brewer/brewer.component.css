@@ -32,15 +32,35 @@
     background: #8B8B8B no-repeat center center / 32px 32px;
     border: 2px solid;
     border-color: #373737 #FFF #FFF #373737;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
     line-height: 1;
     text-align: left;
     vertical-align: bottom;
 }
 
+.inv-sprite {
+  background-image: url(//hydra-media.cursecdn.com/minecraft-fr.gamepedia.com/4/44/InvSprite.png);
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.inv-sprite-demo-bottle {
+  background-position: -830px -1055px;
+}
+
+.inv-sprite-demo-sugar {
+  background-position: -509px -830px;
+}
+
 /* 1 */
+span.mcui-input.mcui-inactive > span {
+  margin: 0 15px;
+}
 
 .mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-bubbling {
     background-image: url(//hydra-media.cursecdn.com/minecraft.gamepedia.com/d/db/Grid_layout_Brewing_Bubbles_%28In-active%29.png);
@@ -114,13 +134,13 @@
 
 /* INVENTORY */
 
-#inventory {
+/*#inventory {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: 358px;
-}
+}*/
 
 /* END INVENTORY */
