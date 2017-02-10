@@ -132,6 +132,14 @@ span.mcui-input.mcui-inactive > span {
     pointer-events: none;
 }
 
+.brewer-size {
+  height: 215px;width: 275px;
+}
+
+.hide {
+  background: none;
+}
+
 /* INVENTORY */
 
 /*#inventory {

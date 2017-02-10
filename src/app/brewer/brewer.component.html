@@ -1,57 +1,71 @@
-<div class="brewer">
-    <span class="mcui mcui-Brewing_Stand">
-      <span class="mcui-input mcui-inactive">
-        <span class="mcui-bubbling"></span>
+<span class="mcui mcui-Brewing_Stand" [class.brewer-size]="mode === 'live'">
+  <span class="mcui-input mcui-inactive">
+    <span class="mcui-bubbling"></span>
 
-        <!--LIVE-->
-        <span class="invslot"
-              dnd-droppable (onDropSuccess)="transferDataSuccess($event)"
-              *ngIf="mode === 'live'">
-          <span class="invslot-item">
-            <span class="inv-sprite" *ngIf="receivedData.length > 0"
-                  [style.background-position-x.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionX"
-                  [style.background-position-y.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionY">
+    <!--LIVE-->
+    <span class="invslot"
+          dnd-droppable (onDropSuccess)="transferDataSuccess($event)"
+          *ngIf="mode === 'live'">
+      <span class="invslot-item">
+        <span class="inv-sprite" *ngIf="receivedData.length > 0"
+              [style.background-position-x.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionX"
+              [style.background-position-y.px]="receivedData[receivedData.length-1].dragData.css.backgroundPositionY">
 
-            </span>
-          </span>
-        </span>
-
-        <!-- DEMO-->
-        <span class="invslot"
-                *ngIf="mode === 'demo'">
-            <span class="invslot-item">
-              <span class="inv-sprite"
-                    [class.inv-sprite-demo-sugar]="mode === 'demo'">
-              </span>
-            </span>
-        </span>
-
-        <span class="mcui-arrow"></span>
-      </span>
-
-      <span style="height: 50px;margin: -12px auto -26px;" class="mcui-paths"></span>
-
-      <span style="width: 160px;margin: 0 auto;" class="mcui-output">
-        <span class="invslot mcui-output1">
-
-          <span class="invslot-item">
-            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
-            </span>
-          </span>
-
-        </span>
-        <span class="invslot mcui-output2">
-          <span class="invslot-item">
-            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
-            </span>
-          </span>
-        </span>
-        <span class="invslot mcui-output3">
-          <span class="invslot-item">
-            <span class="inv-sprite" [class.inv-sprite-demo-bottle]="mode === 'demo'">
-            </span>
-          </span>
         </span>
       </span>
     </span>
-</div>
+
+    <!-- DEMO-->
+    <span class="invslot"
+            *ngIf="mode === 'demo'">
+        <span class="invslot-item">
+          <span class="inv-sprite"
+                [class.inv-sprite-demo-sugar]="mode === 'demo'">
+          </span>
+        </span>
+    </span>
+
+    <span class="mcui-arrow"></span>
+  </span>
+
+  <span style="height: 50px;margin: -12px auto -26px;" class="mcui-paths"></span>
+
+  <span style="width: 160px;margin: 0 auto;" class="mcui-output">
+    <span class="invslot mcui-output1">
+      <!-- DEMO -->
+      <span *ngIf="mode === 'demo'"class="invslot-item">
+        <span class="inv-sprite inv-sprite-demo-bottle">
+        </span>
+      </span>
+      <!-- LIVE -->
+      <span *ngIf="mode === 'live'" class="invslot-item">
+        <span class="inv-sprite hide">
+        </span>
+      </span>
+    </span>
+    <span class="invslot mcui-output2">
+      <!-- DEMO -->
+      <span *ngIf="mode === 'demo'"class="invslot-item">
+        <span class="inv-sprite inv-sprite-demo-bottle">
+        </span>
+      </span>
+      <!-- LIVE -->
+      <span *ngIf="mode === 'live'" class="invslot-item">
+        <span class="inv-sprite hide">
+        </span>
+      </span>
+    </span>
+    <span class="invslot mcui-output3">
+      <!-- DEMO -->
+      <span *ngIf="mode === 'demo'"class="invslot-item">
+        <span class="inv-sprite inv-sprite-demo-bottle">
+        </span>
+      </span>
+      <!-- LIVE -->
+      <span *ngIf="mode === 'live'" class="invslot-item">
+        <span class="inv-sprite hide">
+        </span>
+      </span>
+    </span>
+  </span>
+</span>

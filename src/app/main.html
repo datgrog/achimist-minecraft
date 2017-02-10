@@ -1,25 +1,32 @@
 <div class="main-container">
+
   <fountain-header></fountain-header>
+
   <main class="main">
+
     <alchimist-title [title]="alchimistDesk"></alchimist-title>
-    <div class="alchimistDesk">
+    <div id="alchimistDesk">
+
       <div class="panel panel-success" style="align-self: center;">
         <div class="panel-heading">Exemple</div>
         <div class="panel-body">
           <alchimist-brewer mode="demo"></alchimist-brewer>
         </div>
       </div>
-      <div>
+
+      <div style="align-self: center;">
         <alchimist-brewer mode="live"></alchimist-brewer>
+      </div>
+
+      <div id="inventory">
         <alchimist-inventory></alchimist-inventory>
       </div>
-      <div>
-        <p>potion sucess failed</p>
-        <p>potions made</p>
-      </div>
+
     </div>
+
     <alchimist-title [title]="alchimistRecipes"></alchimist-title>
     <alchimist-recipes></alchimist-recipes>
+
     <alchimist-title [title]="alchimistJoke"></alchimist-title>
     <div style="display: flex;flex-direction: row;justify-content: center;margin: 1rem;">
       <iframe
@@ -27,6 +34,9 @@
         frameBorder="0">
       </iframe>
     </div>
+
   </main>
+
   <fountain-footer></fountain-footer>
+
 </div>

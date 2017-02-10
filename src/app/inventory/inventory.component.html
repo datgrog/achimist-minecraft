@@ -1,19 +1,30 @@
-<div class="panel panel-success">
-  <div class="panel-heading">Available to drag</div>
+<div class="panel panel-inventory">
+  <div class="panel-heading">Inventory</div>
   <div class="panel-body">
-        <span class="invslot" *ngFor="let ingredient of ingredients">
-          <span class="invslot-item"
-                (onDragSuccess)="usedIngredient($event)"
-                [dragData]="ingredient"
-                dnd-draggable [dragEnabled]="true">
-            <span [title]="ingredient.description" class="inv-sprite"
-                  [style.background-position-x.px]="ingredient.css.backgroundPositionX"
-                  [style.background-position-y.px]="ingredient.css.backgroundPositionY">
-              <!--<div>{{ingredient | json}}</div>-->
-            </span>
-          </span>
-          <p style="margin: 0;position: absolute;bottom: 0;right: 0;color: white;">{{ingredient.quantity}}</p>
-        </span>
+
+    <!-- FILLED CASE -->
+    <span class="invslot" *ngFor="let ingredient of ingredients">
+              <span class="invslot-item"
+                    (onDragSuccess)="usedIngredient($event)"
+                    [dragData]="ingredient"
+                    dnd-draggable [dragEnabled]="true">
+                <span [title]="ingredient.description" class="inv-sprite"
+                      [style.background-position-x.px]="ingredient.css.backgroundPositionX"
+                      [style.background-position-y.px]="ingredient.css.backgroundPositionY">
+                </span>
+              </span>
+              <p style="margin: 0;position: absolute;bottom: 0;right: 0;color: white;">{{ingredient.quantity}}</p>
+    </span>
+
+    <!-- EMPTY CASE -->
+    <span class="invslot" *ngFor="let emptyCase of nbEmptyCase">
+              <span class="invslot-item">
+                <span class="inv-sprite">
+
+                </span>
+              </span>
+    </span>
+
   </div>
 </div>
 <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

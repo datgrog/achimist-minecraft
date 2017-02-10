@@ -13,6 +13,9 @@ export class InventoryComponent implements OnInit {
   ingredients: Ingredient[];
   receivedData: Array<any> = [];
 
+  /* really ??? http://stackoverflow.com/questions/36354325/angular-2-ngfor-using-numbers-instead-collections */
+  nbEmptyCase: number[] = Array(9).fill(0);
+
   constructor (private ingredientService: IngredientService) {}
 
   ngOnInit() {

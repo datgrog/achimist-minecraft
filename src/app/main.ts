@@ -7,5 +7,5 @@ import {Component} from '@angular/core';
 export class MainComponent {
   public alchimistDesk: string = 'Apprentice! Practise to make some great potions!';
   public alchimistRecipes: string = "Apprentice!! Don't you remember what I told you !?";
-  public alchimistJoke: string = 'Apprentice!!! What the ... Oh hum, nothing ^^';
+  public alchimistJoke: string = 'Apprentice!!! What are you ... Oh hum, nothing ^^';
 }

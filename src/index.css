@@ -3,6 +3,7 @@ html, body, #root {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
   background: #3A539B;
+  min-width: 400px;
 }
 
 body, h1, h2, h3 {
@@ -36,7 +37,7 @@ a:hover {
 }
 .header-title {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1rem;
 }
 .header-date {
@@ -67,7 +68,7 @@ a:hover {
 }
 .title-h2 {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: .5rem;
 }
 
@@ -81,9 +82,20 @@ a:hover {
 
 /* alchimist desk */
 
-.alchimistDesk {
+@media screen and (max-width: 900px) {
+  #alchimistDesk {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 800px !important;
+  }
+}
+
+#alchimistDesk {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   padding: 1rem;
@@ -159,3 +171,11 @@ a:hover {
 }
 
 /* drag and drop END */
+
+/* inventory */
+
+#inventory {
+  max-width: 334px;
+}
+
+/* inventory END */

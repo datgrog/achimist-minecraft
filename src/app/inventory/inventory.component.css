@@ -1,3 +1,24 @@
+.panel-inventory {
+  background-color: #C6C6C6;
+  border: 2px solid;
+  border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB !important;
+}
+
+.panel-heading {
+  color: white;
+  background-color: #8b8b8b;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 250px;
+  height: 220px;
+}
+
 .invslot {
   position: relative;
   display: inline-block;
