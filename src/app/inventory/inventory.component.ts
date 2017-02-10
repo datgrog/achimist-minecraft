@@ -22,6 +22,17 @@ export class InventoryComponent implements OnInit {
     this.getIngredients();
   }
 
+  inventoryDrop($event: any) {
+    console.log('inventoryDrop');
+    let ingredientId = $event.dragData[0];
+
+    for (let ingredient of this.ingredients) {
+      if (ingredient.id === ingredientId) {
+        ingredient.quantity++;
+      }
+    }
+  }
+
   getIngredients() {
     this.ingredientService.getIngredients()
       .subscribe(

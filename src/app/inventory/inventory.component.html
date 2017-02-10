@@ -1,13 +1,14 @@
 <div class="panel panel-inventory">
   <div class="panel-heading">Inventory</div>
-  <div class="panel-body">
+  <div class="panel-body"
+       dnd-droppable [dropZones]="['inventory']" (onDropSuccess)="inventoryDrop($event)">
 
     <!-- FILLED CASE -->
     <span class="invslot" *ngFor="let ingredient of ingredients">
               <span class="invslot-item"
+                    dnd-draggable
                     (onDragSuccess)="usedIngredient($event)"
-                    [dragData]="ingredient"
-                    dnd-draggable [dragEnabled]="true">
+                    [dragData]="ingredient" [dragEnabled]="true" >
                 <span [title]="ingredient.description" class="inv-sprite"
                       [style.background-position-x.px]="ingredient.css.backgroundPositionX"
                       [style.background-position-y.px]="ingredient.css.backgroundPositionY">

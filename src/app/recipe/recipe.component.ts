@@ -53,8 +53,8 @@ export class RecipeComponent implements OnInit {
     // très moche et pas opti du tout
     if (this.ingredients !== undefined) {
       for (let ingredient of this.ingredients) {
-        if (ingredient.id == id) {
-          return ingredient.css.backgroundPositionX+'px '+ingredient.css.backgroundPositionY+'px';
+        if (ingredient.id === id) {
+          return ingredient.css.backgroundPositionX + 'px ' + ingredient.css.backgroundPositionY + 'px';
         }
       }
     }
