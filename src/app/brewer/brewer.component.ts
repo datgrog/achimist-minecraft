@@ -1,38 +1,15 @@
-import {Component, Input, OnInit} from '@angular/core';
-import { RecipeService } from '../recipe/recipe.service';
-import {Recipe} from "../recipe/recipe.model";
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'alchimist-brewer',
     template: require('./brewer.component.html'),
     styleUrls:  ['app/brewer/brewer.component.css']
 })
-export class BrewerComponent implements OnInit {
+export class BrewerComponent {
   @Input() mode: string;
-  errorMessage: string;
-  recipes: Recipe[];
   receivedData: Array<any> = [];
 
-  constructor(private recipeService: RecipeService) {
-  }
-
-  ngOnInit() {
-    if (this.mode === 'live')
-      this.getRecipes();
-  }
-
-  getRecipes() {
-    this.recipeService.getRecipes()
-      .subscribe(
-        recipes => {
-          this.recipes = recipes;
-          console.log('Recipes');
-          console.log(recipes);
-        },
-        error => {
-          this.errorMessage = <any>error;
-        });
-  }
+  constructor() {}
 
   transferDataSuccess($event: any) {
     this.receivedData.push($event);

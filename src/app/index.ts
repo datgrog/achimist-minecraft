@@ -13,6 +13,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InventoryModule } from './inventory/index';
 
 import { IngredientRecipeData } from './ingredient.recipe.data';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { IngredientRecipeData } from './ingredient.recipe.data';
     MainComponent,
     HeaderComponent,
     TitleComponent,
-    FooterComponent
+    FooterComponent,
+    RecipeComponent
   ],
   bootstrap: [RootComponent]
 })

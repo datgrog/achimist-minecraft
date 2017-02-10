@@ -10,7 +10,7 @@ import { RecipeService } from '../recipe/recipe.service';
       DndModule.forRoot()
     ],
     declarations: [
-        BrewerComponent
+      BrewerComponent
     ],
     providers: [
       RecipeService

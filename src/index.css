@@ -2,6 +2,7 @@ html, body, #root {
   margin: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background: #3A539B;
 }
 
 body, h1, h2, h3 {
@@ -84,7 +85,6 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #3A539B;
 
   padding: 1rem;
 }

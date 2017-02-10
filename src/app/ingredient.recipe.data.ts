@@ -120,8 +120,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de vision nocturne',
           'description': "Éclaircit visuellement l'environnement et rend l'eau plus transparente.",
           'css': {
-            'backgroundPositionX': '-32',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '-28',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [
@@ -139,8 +139,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de rapidité',
           'description': "Cette potion augmente votre vitesse de marche. ",
           'css': {
-            'backgroundPositionX': '-192',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '-189',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [
@@ -158,8 +158,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de force',
           'description': "Cette potion augmente votre force dans les combats.",
           'css': {
-            'backgroundPositionX': '-160',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '-158',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [
@@ -196,8 +196,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de saut',
           'description': "Cette potion augmente la hauteur de vos sauts.",
           'css': {
-            'backgroundPositionX': '0',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '3',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [
@@ -215,8 +215,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de régénération',
           'description': "Cette potion regénère votre vie.",
           'css': {
-            'backgroundPositionX': '-96',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '-93',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [
@@ -234,8 +234,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de résistance au feu',
           'description': "Cette potion vous permet d'être immunisé contre la chaleur des flammes et de la lave !",
           'css': {
-            'backgroundPositionX': '-896',
-            'backgroundPositionY': '-1056'
+            'backgroundPositionX': '-893',
+            'backgroundPositionY': '-1055'
           }
         },
         'ingredients': [
@@ -253,8 +253,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de respiration aquatique',
           'description': "Cette potion permet de respirer sous l'eau pendant une longue periode.",
           'css': {
-            'backgroundPositionX': '-64',
-            'backgroundPositionY': '-1344'
+            'backgroundPositionX': '-61',
+            'backgroundPositionY': '-1343'
           }
         },
         'ingredients': [
@@ -272,8 +272,8 @@ export class IngredientRecipeData implements InMemoryDbService {
           'nom': 'Potion de poison',
           'description': "Cette potion est un poison qui vous fait perdre peu à peu vos points de vie.",
           'css': {
-            'backgroundPositionX': '-64',
-            'backgroundPositionY': '-1088'
+            'backgroundPositionX': '-61',
+            'backgroundPositionY': '-1087'
           }
         },
         'ingredients': [

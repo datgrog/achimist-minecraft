@@ -1,0 +1,36 @@
+<div class="center">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      Recipes
+    </div>
+    <div class="panel-body" style="min-width: 200px;">
+      <div *ngFor="let recipe of recipes" class="recipe">
+        <span class="invslot">
+            <span class="invslot-item">
+              <span class="inv-sprite"
+                    [style.background-position]="getSpriteIngredient(recipe.ingredients[0].id)">
+              </span>
+            </span>
+        </span>
+        <p>+</p>
+        <span class="invslot">
+            <span class="invslot-item">
+              <span class="inv-sprite"
+                    [style.background-position]="'-830px -1055px'">
+              </span>
+            </span>
+        </span>
+        <p>=</p>
+        <span class="invslot">
+          <span class="invslot-item">
+            <span [title]="recipe.result.description" class="inv-sprite"
+                  [style.background-position-x.px]="recipe.result.css.backgroundPositionX"
+                  [style.background-position-y.px]="recipe.result.css.backgroundPositionY">
+              <!--<div>{{recipe | json}}</div>-->
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
