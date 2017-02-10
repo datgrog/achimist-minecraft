@@ -1,3 +1,13 @@
+@media screen and (max-width: 650px) {
+  div.recipe-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  div.recipe-separator {
+    display: none !important;
+  }
+}
+
 .center {
   display: flex;
   flex-direction: row;
@@ -5,9 +15,26 @@
   margin: 1rem;
 }
 
-.recipe {
+.recipe-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recipe-items {
   display: flex;
   justify-content: space-between;
+  min-width: 190px;
+  align-items: center;
+}
+
+div.recipe-items:not(:nth-child(3n)) > div.recipe-separator {
+  background-color: #bce8f1;
+  width: 3px;
+  height: 100%;
+  margin: 0 5px 0 10px;
 }
 
 .invslot {

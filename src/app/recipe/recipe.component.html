@@ -3,8 +3,8 @@
     <div class="panel-heading">
       Recipes
     </div>
-    <div class="panel-body" style="min-width: 200px;">
-      <div *ngFor="let recipe of recipes" class="recipe">
+    <div class="panel-body recipe-container">
+      <div *ngFor="let recipe of recipes" class="recipe-items">
         <span class="invslot">
             <span class="invslot-item">
               <span class="inv-sprite"
@@ -30,6 +30,7 @@
             </span>
           </span>
         </span>
+        <div class="recipe-separator"></div>
       </div>
     </div>
   </div>
