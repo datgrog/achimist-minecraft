@@ -3,16 +3,6 @@ export class IngredientRecipeData implements InMemoryDbService {
   createDb() {
     let ingredients = [
       {
-        'id': 115,
-        'nom': 'Verrues du Nether',
-        'description': 'Les verrues du Nether sont des plantes poussant naturellement dans le Nether.',
-        'quantity': 99,
-        'css': {
-          'backgroundPositionX': '-704',
-          'backgroundPositionY': '-640'
-        }
-      },
-      {
         'id': 396,
         'nom': 'Carotte Dorée',
         'description': 'La carotte dorée peut être mangée et restaure. Elle permet aussi et surtout de confectionner des potions de vision nocturne.',

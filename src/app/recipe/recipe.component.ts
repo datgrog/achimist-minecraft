@@ -27,8 +27,6 @@ export class RecipeComponent implements OnInit {
       .subscribe(
         recipes => {
           this.recipes = recipes;
-          console.log('Recipes');
-          console.log(recipes);
         },
         error => {
           this.errorMessage = <any>error;
@@ -40,8 +38,6 @@ export class RecipeComponent implements OnInit {
       .subscribe(
         ingredients => {
           this.ingredients = ingredients;
-          console.log('Ingredients');
-          console.log(ingredients);
         },
         error => {
           this.errorMessage = <any>error;

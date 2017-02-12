@@ -4,13 +4,13 @@
 
     <!--LIVE-->
     <span class="invslot"
-          title="ingredient"
           dnd-droppable (onDropSuccess)="ingredientDrop($event)" [allowDrop]="allowDrop('ingredient')"
           *ngIf="mode === 'live'">
 
       <span class="invslot-item"
-            *ngIf="null !== brewerInput.ingredient"
-            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.ingredient.id, 'ingredient']"
+            *ngIf="brewerInput.ingredient"
+            [title]="brewerInput.ingredient.description"
+            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.ingredient, 'ingredient']"
             [dropZones]="['inventory']" (onDragSuccess)="resetBrowerInput($event)">
 
         <span class="inv-sprite" *ngIf="brewerInput.ingredient.id > 0"
@@ -50,8 +50,9 @@
           dnd-droppable (onDropSuccess)="bottleDrop1($event)" [allowDrop]="allowDrop('output1')">
 
       <span class="invslot-item"
-            *ngIf="null !== brewerInput.bottle1"
-            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle1.id, 'bottle1']"
+            *ngIf="brewerInput.bottle1"
+            [title]="brewerInput.bottle1.description"
+            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle1, 'bottle1']"
             [dropZones]="['inventory']" (onDragSuccess)="resetBrowerInput($event)">
         <span class="inv-sprite" *ngIf="brewerInput.bottle1.id > 0"
               [style.background-position-x.px]="brewerInput.bottle1.css.backgroundPositionX"
@@ -73,8 +74,9 @@
           dnd-droppable (onDropSuccess)="bottleDrop2($event)" [allowDrop]="allowDrop('output2')">
 
       <span class="invslot-item"
-            *ngIf="null !== brewerInput.bottle2"
-            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle2.id, 'bottle2']"
+            *ngIf="brewerInput.bottle2"
+            [title]="brewerInput.bottle2.description"
+            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle2, 'bottle2']"
             [dropZones]="['inventory']" (onDragSuccess)="resetBrowerInput($event)">
         <span class="inv-sprite" *ngIf="brewerInput.bottle2.id > 0"
               [style.background-position-x.px]="brewerInput.bottle2.css.backgroundPositionX"
@@ -96,8 +98,9 @@
           dnd-droppable (onDropSuccess)="bottleDrop3($event)" [allowDrop]="allowDrop('output3')">
 
       <span class="invslot-item"
-            *ngIf="null !== brewerInput.bottle3"
-            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle3.id, 'bottle3']"
+            *ngIf="brewerInput.bottle3"
+            [title]="brewerInput.bottle3.description"
+            dnd-draggable [dragEnabled]="true" [dragData]="[brewerInput.bottle3, 'bottle3']"
             [dropZones]="['inventory']" (onDragSuccess)="resetBrowerInput($event)">
         <span class="inv-sprite" *ngIf="brewerInput.bottle3.id > 0"
               [style.background-position-x.px]="brewerInput.bottle3.css.backgroundPositionX"
@@ -106,4 +109,13 @@
       </span>
     </span>
   </span>
+  <button *ngIf="mode === 'live' && allowBrewing()"
+          (click)="startBrewing()"
+          class="btn start-recipe">
+    Make my potion!
+  </button>
+  <button *ngIf="mode === 'live' && !allowBrewing()"
+          class="btn start-recipe" disabled>
+    Make my potion!
+  </button>
 </span>

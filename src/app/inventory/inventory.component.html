@@ -8,7 +8,7 @@
               <span class="invslot-item"
                     dnd-draggable
                     (onDragSuccess)="usedIngredient($event)"
-                    [dragData]="ingredient" [dragEnabled]="true" >
+                    [dragData]="ingredient" [dragEnabled]="ingredient.quantity > 0" >
                 <span [title]="ingredient.description" class="inv-sprite"
                       [style.background-position-x.px]="ingredient.css.backgroundPositionX"
                       [style.background-position-y.px]="ingredient.css.backgroundPositionY">
@@ -18,12 +18,14 @@
     </span>
 
     <!-- EMPTY CASE -->
-    <span class="invslot" *ngFor="let emptyCase of nbEmptyCase">
+    <span class="invslot" *ngFor="let emptyCase of emptyCases">
               <span class="invslot-item">
-                <span class="inv-sprite">
-
+                <span class="inv-sprite"
+                      [style.background-position-x.px]="emptyCase.css.backgroundPositionX"
+                      [style.background-position-y.px]="emptyCase.css.backgroundPositionY">
                 </span>
               </span>
+      <p *ngIf="emptyCase.quantity" style="margin: 0;position: absolute;bottom: 0;right: 0;color: white;">{{emptyCase.quantity}}</p>
     </span>
 
   </div>

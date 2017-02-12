@@ -1,7 +1,8 @@
+import {Ingredient} from "../ingredient/ingredient.model";
 export class Recipe {
   constructor(
-    public result: Object,
-    public ingredients: Object
+    public result: Ingredient,
+    public ingredients: Ingredient[]
   ) { }
 }
 /*

@@ -133,7 +133,7 @@ span.mcui-input.mcui-inactive > span {
 }
 
 .brewer-size {
-  height: 215px;width: 275px;
+  width: 275px;
 }
 
 .hide {
@@ -152,3 +152,42 @@ span.mcui-input.mcui-inactive > span {
 }*/
 
 /* END INVENTORY */
+
+/* button recipe */
+
+.start-recipe {
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #D44646;
+  *background-color: #D44646;
+  background-image: -moz-linear-gradient(top, #CF4646, #D44646);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#CF4646), to(#D44646));
+  background-image: -webkit-linear-gradient(top, #CF4646, #D44646);
+  background-image: -o-linear-gradient(top, #CF4646, #D44646);
+  background-image: linear-gradient(to bottom, #CF4646, #D44646);
+  background-repeat: repeat-x;
+  border-color: #D44646;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CF4646', endColorstr='#D44646', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.start-recipe.disabled,
+.start-recipe[disabled] {
+  color: #FFFFFF;
+  background-color: #8b8b8b;
+}
+
+.btn {
+  margin: 15px auto 5px auto;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* button recipe END */

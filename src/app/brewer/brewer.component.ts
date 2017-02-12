@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Ingredient} from '../ingredient/ingredient.model';
+import {RecipeService} from '../recipe/recipe.service';
+import {Recipe} from "../recipe/recipe.model";
 
 @Component({
     selector: 'alchimist-brewer',
@@ -8,8 +10,9 @@ import {Ingredient} from '../ingredient/ingredient.model';
 })
 
 
-export class BrewerComponent {
+export class BrewerComponent implements OnInit {
   @Input() mode: string;
+  recipes: Recipe[];
 
   brewerInput: BrewerInput = {
     ingredient: null,
@@ -18,7 +21,58 @@ export class BrewerComponent {
     bottle3: null
   };
 
-  constructor() {}
+  constructor(private recipeService: RecipeService) {}
+
+  ngOnInit() {
+    this.getRecipes();
+  }
+
+  getRecipes() {
+    this.recipeService.getRecipes()
+      .subscribe(
+        recipes => {
+          this.recipes = recipes;
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  allowBrewing(): boolean {
+    if (this.brewerInput.ingredient && (this.brewerInput.bottle1 || this.brewerInput.bottle2 || this.brewerInput.bottle3)) {
+      // 1 ingredient et au moins 1 bottle')
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  startBrewing() {
+    console.log('startBrewing');
+    let primaryIngredientId = this.brewerInput.ingredient.id;
+    let craftedPotion: Ingredient;
+
+    for (let recipe of this.recipes) {
+      for (let ingredient of recipe.ingredients) {
+        if (primaryIngredientId === ingredient.id) {
+          craftedPotion = recipe.result;
+        }
+      }
+    }
+    console.log(craftedPotion);
+    // clear ingredient and replace bottle water by crafted potion
+    this.brewerInput.ingredient = null;
+    if (this.brewerInput.bottle1) {
+      this.brewerInput.bottle1 = craftedPotion;
+    }
+    if (this.brewerInput.bottle2) {
+      this.brewerInput.bottle2 = craftedPotion;
+    }
+    if (this.brewerInput.bottle3) {
+      this.brewerInput.bottle3 = craftedPotion;
+    }
+
+  }
 
   ingredientDrop($event: any) {
     console.log('ingredientDrop');
